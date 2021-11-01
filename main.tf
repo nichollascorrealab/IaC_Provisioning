@@ -8,23 +8,8 @@ resource "aws_security_group" "my_security_group" {
   description = "security group for Ec2 instance"
 
   ingress {
-    from_port   = 8080
-    to_port     = 8080
-    protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-
- ingress {
-    from_port   = 22
-    to_port     = 22
-    protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-
- # outbound from jenkis server
-  egress {
-    from_port   = 0
-    to_port     = 65535
+    from_port   = 3389
+    to_port     = 3389
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
@@ -50,6 +35,6 @@ resource "aws_eip" "myFirstInstance" {
   vpc      = true
   instance = aws_instance.myFirstInstance.id
 tags= {
-    Name = "my_elastic_ip"
+    Name = "Windows_Server"
   }
 }
