@@ -15,7 +15,7 @@ variable "instance_type" {
 
 variable "security_group" {
   description = "Nome do Grupo de Segurança"
-  default     = "sg-0027954aaddb8219d (launch-wizard-5)"
+  default     = "sg-jenkins"
 }
 
 variable "tag_name" {
