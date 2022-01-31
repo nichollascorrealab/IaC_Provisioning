@@ -35,6 +35,6 @@ resource "aws_eip" "myFirstInstance" {
   vpc      = true
   instance = aws_instance.myFirstInstance.id
 tags= {
-    Name = "Windows_Server"
+    Name = "Windows_Server_2019"
   }
 }
