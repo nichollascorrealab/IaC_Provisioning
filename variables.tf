@@ -1,5 +1,5 @@
 variable "aws_region" {
-  description = "Região para Criação no AWS"
+  description = "Região para Criação na AWS"
   default     = "us-east-2"
 }
 
